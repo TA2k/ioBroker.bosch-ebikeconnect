@@ -1,0 +1,120 @@
+{
+    "common": {
+        "name": "bosch-ebikeconnect",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Bosch eBike Connect",
+        "titleLang": {
+            "en": "Bosch eBike Connect",
+            "de": "Bosch eBike Connect",
+            "ru": "Bosch eBike Connect",
+            "pt": "Bosch eBike Connect",
+            "nl": "Bosch eBike Connect",
+            "fr": "Connexion VAE Bosch",
+            "it": "Bosch eBike Connect",
+            "es": "Bosch eBike Connect",
+            "pl": "Bosch eBike Connect",
+            "zh-cn": "博世电动自行车连接"
+        },
+        "desc": {
+            "en": "Adapter for Bosch eBike Connect",
+            "de": "Adapter für Bosch eBike Connect",
+            "ru": "Адаптер для Bosch eBike Connect",
+            "pt": "Adaptador para Bosch eBike Connect",
+            "nl": "Adapter voor Bosch eBike Connect",
+            "fr": "Adaptateur pour Bosch eBike Connect",
+            "it": "Adattatore per Bosch eBike Connect",
+            "es": "Adaptador para Bosch eBike Connect",
+            "pl": "Adapter do Bosch eBike Connect",
+            "zh-cn": "Bosch eBike Connect 适配器"
+        },
+        "authors": [
+            "TA2k <tombox2020@gmail.com>"
+        ],
+        "keywords": [
+            "bosch",
+            "ebike",
+            "ebike connect"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "bosch-ebikeconnect.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/TA2k/ioBroker.bosch-ebikeconnect/master/admin/bosch-ebikeconnect.png",
+        "readme": "https://github.com/TA2k/ioBroker.bosch-ebikeconnect/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "vehicle",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "materialize": true,
+        "adminUI": {
+            "config": "json"
+        },
+        "plugins": {
+            "sentry": {
+                "dsn": "https://c9bd6c851b1246da95e6e982aa9b88f3@sentry.iobroker.net/152"
+            }
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.2.0"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.2.28"
+            }
+        ]
+    },
+    "encryptedNative": [
+        "password"
+    ],
+    "protectedNative": [
+        "password"
+    ],
+    "native": {
+        "username": "",
+        "password": "",
+        "interval": 10
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
